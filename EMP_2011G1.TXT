@@ -1,0 +1,83 @@
+SQL> CONNECT
+Enter user-name: SYSTEM
+Connected.
+
+SQL> CREATE TABLE EMP(E_NO NUMBER(5),E_NAME CHAR(15),BASIC_SAL NUMBER(10));
+
+Table created.
+
+SQL> INSERT INTO EMP VALUES('457','SWAGATA','17000');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES('234','JAYANTA','5000');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES('145','SUMAN','13000');
+
+1 row created.                                           
+
+SQL> INSERT INTO EMP VALUES('100','BHARAT','50000');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES('201','SUSMITA','30000');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES('226','SUVCHA','85000');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES('990','ALAM','15000');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES('650','SUMIT','13000');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES('045','NIL','75000');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES('745','PAYEL','32000');
+
+1 row created.
+
+SQL> SELECT * FROM EMP;
+
+      E_NO E_NAME           BASIC_SAL                                           
+---------- --------------- ----------                                           
+       457 SWAGATA              17000                                           
+       234 JAYANTA               5000                                           
+       145 SUMAN                13000                                           
+       100 BHARAT               50000                                           
+       201 SUSMITA              30000                                           
+       226 SUVCHA               85000                                           
+       990 ALAM                 15000                                           
+       650 SUMIT                13000                                           
+        45 NIL                  75000                                           
+       745 PAYEL                32000                                           
+
+10 rows selected.
+
+
+SQL> SELECT * FROM EMP WHERE BASIC_SAL=(SELECT MAX(BASIC_SAL)FROM EMP);
+
+      E_NO E_NAME           BASIC_SAL                                           
+---------- --------------- ----------                                           
+       226 SUVCHA               85000                                           
+
+SQL> SELECT E_NAME FROM EMP WHERE E_NAME LIKE 'S%';
+
+E_NAME                                                                          
+---------------                                                                 
+SWAGATA                                                                         
+SUMAN                                                                           
+SUSMITA                                                                         
+SUVCHA                                                                          
+SUMIT                                                                           
+
+SQL> SPOOL OFF;

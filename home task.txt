@@ -1,0 +1,7 @@
+1.Romance.
+2.input=apple
+      output=dssoh.
+3.perfect or not.
+4.reverse a string.
+5.alphabatical order sort.
+6.case change.

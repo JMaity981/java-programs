@@ -1,0 +1,20 @@
+import java.uitl.*;
+class binarytooctal
+{
+  public static void main(String []args)
+  {
+    System.out.println("Enter a binarry");
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int oct[]=new int[30];
+	while(n!=0)
+	{
+	  oct[i]=n%8;
+      i++;
+      n=n/8;
+    }
+     System.out.println("Equivalent octal number is:");
+     for(j=i-1;j>0;j--)
+        System.out.println(oct[j]);
+    }
+}	
